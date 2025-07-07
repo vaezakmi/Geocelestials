@@ -55,3 +55,70 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+ // Sticky Navbar on Scroll
+    window.onscroll = function() { stickyNav() };
+    var navbar = document.querySelector("nav");
+    var sticky = navbar.offsetTop;
+
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Add Active Class on Click
+    const navItems = document.querySelectorAll(".nav-links li a");
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navItems.forEach(link => link.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+     // Scroll Animation: Adding "show" class to service cards when in view
+    window.addEventListener('scroll', () => {
+        const serviceCards = document.querySelectorAll('.service-card');
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        serviceCards.forEach(card => {
+            if (card.offsetTop + card.offsetHeight < scrollPosition) {
+                card.classList.add('show');
+            }
+        });
+    });
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    status.textContent = "Sending...";
+    status.style.color = "#fff";
+    try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+            status.textContent = "Thank you! Your message has been sent.";
+            status.style.color = "#4CAF50";
+            form.reset();
+        } else {
+            status.textContent = "Oops! Something went wrong. Please try again.";
+            status.style.color = "#ff4444";
+        }
+    } catch {
+        status.textContent = "Network error. Please try again.";
+        status.style.color = "#ff4444";
+    }
+});
