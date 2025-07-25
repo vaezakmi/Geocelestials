@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geocelestial Ltd</title>
+    
+        <!-- Favicon (Image as title) -->
+        <link rel="icon" href="img/GEOCELESTIAL LTD V3 SVG-01.svg" type="image/svg">
+    
+    </head>
+</head>
+<body>
+    <div class="container content">
+<div class="margin-bottom-40">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOCELESTIAL Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0b3e62;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #0b3e62;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: #06991a;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #0b3e62;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(11, 62, 98, 0.8);
+            border-radius: 50%;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #0b3e62;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Team Section */
+        .team-member {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member h4 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #666;
+        }
+        /* Contact Section */
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        /* Button Styles */
+        .contact-form button {
+            background-color: transparent;
+            color: #0b3e62;
+            padding: 10px 20px;
+            border: 2px solid #0b3e62;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Add underline effect on hover */
+        .contact-form button::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Adjust the position of the line */
+            width: 0;
+            height: 2px; /* Line thickness */
+            background-color: #0b3e62; /* Line color */
+            transition: width 0.3s ease; /* Smooth transition */
+        }
+
+        /* Expand the line on hover */
+        .contact-form button:hover::after {
+            width: 100%; /* Line expands across the button */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b3e62;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Geocelestial Ltd</h1>
+        <p>Your Gateway to Celestial Services</p>
+    </header>
+    <nav>
+        <div class="nav-logo">
+            <a href="#home">
+                <img src="img/GEOCELESTIAL LTD V2-01.svg" alt="Geocelestial Ltd" class="logo">
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Your content goes here -->
+</body>
+<!-- CSS -->
+<style>
+    /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f9fc;
+    padding-top: 70px; /* Add padding to prevent content overlap with the fixed navbar */
+}
+
+/* Header Styles */
+header {
+    background-color: #0b3e62;
+    color: white;
+    text-align: center;
+    padding: 50px 15px;
+    z-index: 0; /* Ensure header stays below the navbar */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keep navbar on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Other styles remain the same */
+    .nav-logo .logo {
+        width: 200px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-logo .logo:hover {
+        transform: scale(1.05);
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 5px;
+        position: relative;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    /* Hover effect: text color and underline */
+    .nav-links li a:hover {
+        color: #4CAF50;
+        transform: translateY(-2px);
+    }
+
+    .nav-links li a::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #4CAF50;
+        transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+        width: 100%;
+    }
+
+    /* Active link color */
+    .nav-links li a.active {
+        color: #4CAF50;
+        transform: translateY(-2px);
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        background-color: #fff;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Mobile menu styling */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #0b3e62;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #0b3e62;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #4CAF50;
+    }
+</style>
+
+<script>
+    // Sticky Navbar on Scroll
+    window.onscroll = function() { stickyNav() };
+    var navbar = document.querySelector("nav");
+    var sticky = navbar.offsetTop;
+
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Add Active Class on Click
+    const navItems = document.querySelectorAll(".nav-links li a");
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navItems.forEach(link => link.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+</script>
+<!-- Include Bootstrap CSS and JavaScript -->
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<!-- Home Section -->
+<section id="home" class="section">
+    <div id="carouselHome" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/survey.jpg" class="d-block w-100" alt="Survey Image">
+                <div class="carousel-caption">
+                    <h3>Precision in Surveying</h3>
+                    <p>Delivering excellence in land surveying services across Kenya.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/IMG_20241119_151506.jpg" class="d-block w-100" alt="Image 2">
+                <div class="carousel-caption">
+                    <h3>Innovative Technology</h3>
+                    <p>Utilizing the latest tools for accuracy and efficiency.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/IMG_20241119_151209.jpg" class="d-block w-100" alt="Image 3">
+                <div class="carousel-caption">
+                    <h3>Professional Expertise</h3>
+                    <p>Committed to delivering professional and timely services.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/20211016_145840.jpg" class="d-block w-100" alt="Image 4">
+                <div class="carousel-caption">
+                    <h3>Sustainable Solutions</h3>
+                    <p>Environmental impact assessments tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/20240516_141438.jpg" class="d-block w-100" alt="Image 5">
+                <div class="carousel-caption">
+                    <h3>Best Services</h3>
+                    <p>Advanced geospatial systems for better decision-making.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/20240321_100619.jpg" class="d-block w-100" alt="Image 6">
+                <div class="carousel-caption">
+                    <h3>Your Trusted Partner</h3>
+                    <p>Offering comprehensive solutions tailored to your needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<style>
+    /* Carousel Section Styling */
+    #home .carousel-inner {
+        height: 100vh; /* Ensure full viewport height */
+    }
+
+    #home .carousel-item img {
+        object-fit: cover; /* Ensures the image fills the container without stretching */
+        width: 100%; /* Makes the image span the entire width of the carousel */
+        height: 100%; /* Ensures the image takes up the full height of the carousel */
+        object-position: center; /* Keeps the image centered within its container */
+    }
+
+    /* Optional: Adding smooth transition to images */
+    #home .carousel-item {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Customizing the carousel caption */
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5); /* Dark background for better readability */
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+</style>
+<section id="about" class="section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Geocelestial Ltd is a registered company in Kenya offering professional services in land surveying, Geospatial Information Systems, Remote Sensing, Environmental Impact Assessment, Environmental Audit, and Information Technology. We meet this broad spectrum of surveying and engineering needs by offering high-quality work within reliable turnaround timelines, and in unparalleled professionalism.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+   /* About Section Styling */
+#about {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(11, 62, 98, 0.7), rgba(11, 62, 98, 0.7)), url('img/remote\ sensing.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center center; /* Center the background image */
+    z-index: 1; /* Make sure text is above the background */
+}
+
+/* Overlay for Background Image */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
+    z-index: 0; /* Overlay stays below the content */
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure text content appears above overlay */
+}
+
+/* Heading Styles for About Section */
+#about h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Paragraph Styles for About Section */
+#about p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Button Styling (optional) */
+#about .cta-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#about .cta-btn:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 15px;
+    }
+
+    #about h2 {
+        font-size: 2.2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .about-container {
+        padding: 0 20px;
+    }
+}
+    /* Heading Styling */
+    #about h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    /* Paragraph Styling */
+    #about p {
+        font-size: 1.2rem;
+        color: #ddd;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+        animation: fadeInUp 1.5s ease-out;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #about h2 {
+            font-size: 2.5rem;
+        }
+
+        #about p {
+            font-size: 1rem;
+        }
+    }
+</style>
+<!-- Services Section -->
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <img src="img/survey.jpg" alt="Land Surveying">
+            <h3>Land Surveying</h3>
+            <p>Our land surveyors are registered with the Institution of Surveyors of Kenya (ISK) and the Land Surveyors Board (LSB) to provide Cadastral/Real Property, Topographical, Engineering, Mining, and Hydrographic Surveying services to clients countrywide.</p>
+        </div>
+        <div class="service-card">
+            <img src="img/GIS.jpg" alt="GIS">
+            <h3>GIS</h3>
+            <p>Our experienced personnel in the GIS department conduct Spatial Analysis and Visualization of various datasets, predicting the outcomes of different actions to help clients make informed decisions.</p>
+        </div>
+        <div class="service-card">
+            <img src="img/remote sensing.jpeg" alt="Remote Sensing">
+            <h3>Remote Sensing</h3>
+            <p>Our partnerships with global data collectors like NASA, USGS, Kenya Space Agency, among others; gives us access to a wide range of remotely acquired satellite data.
+ Moreover, our team in partnership with KCAA has been licensed to operate Unmanned Aerial Vehicles/ Drones; facilitating fast massive data collection as well as in inaccessible areas.</p>
+        </div>
+        <div class="service-card">
+            <img src="img/ESIA.jpg" alt="Environmental Impact Assessment">
+            <h3>Environmental Impact Assessment</h3>
+            <p>All development projects require EIA/EA. Our experts, licensed by NEMA, conduct audits and generate comprehensive EIA reports for various projects.</p>
+        </div>
+        <div class="service-card">
+            <img src="img/Information Tech.png" alt="Information Technology (IT)">
+            <h3>Information Technology (IT)</h3>
+            <p>Our tech enthusiasts through machine learning, Artificial Intelligence (AI), and Programming languages have the ability to develop Land Information Systems, Web Maps, GIS Systems, for organizations.</p>
+        </div>
+        <div class="service-card">
+            <img src="img/gis training.jpg" alt="GIS Training">
+            <h3>GIS Training</h3>
+            <p>We offer comprehensive GIS training programs designed to equip individuals with the skills needed to excel in spatial data management, mapping, and analysis. Our training courses cover GIS software, remote sensing, and spatial data analysis techniques.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Services Section Styling */
+    #services {
+        padding: 30px 5%;
+        background-color: #f4f9fc;
+        text-align: center;
+    }
+
+    #services h2 {
+        font-size: 2.5rem;
+        color: #0b3e62;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Services Container for Horizontal Scrolling */
+    .services-container {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        flex-wrap: nowrap; /* Prevent wrapping of cards */
+        justify-content: flex-start;
+        scroll-behavior: smooth; /* Smooth scrolling */
+        padding-top: 20px; /* Add some space at the top */
+    }
+
+    /* Service Card Styling */
+    .service-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateX(-1px);
+        transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        text-align: left;
+        width: 320px;  /* Width of each card */
+        flex-shrink: 0; /* Prevent shrinking */
+        border: 2px solid #0b3e62;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    }
+
+    .service-card img {
+        width: 100%; /* Full width for the image */
+        height: 180px; /* Adjust the height of the image */
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .service-card h3 {
+        font-size: 1.8rem;
+        color: #0b3e62;
+        margin: 20px 0;
+        font-weight: 600;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Hover Effects for Cards */
+    .service-card:hover {
+        transform: translateY(-10px);  /* Lift effect on hover */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        border-color: #00aaff; /* Change border color on hover */
+    }
+
+    /* Scroll Animation for Cards */
+    .service-card.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .service-card {
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .service-card {
+            width: 90%;
+            height: auto;
+            position: relative;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<script>
+    // Scroll Animation: Adding "show" class to service cards when in view
+    window.addEventListener('scroll', () => {
+        const serviceCards = document.querySelectorAll('.service-card');
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        serviceCards.forEach(card => {
+            if (card.offsetTop + card.offsetHeight < scrollPosition) {
+                card.classList.add('show');
+            }
+        });
+    });
+</script>
+<!-- Team Section -->
+<section id="team" class="section">
+    <h2>Our Team</h2>
+    <div class="team-container">
+        <div class="team-member" style="background-image: url('img/ceo1.avif');">
+            <div class="overlay"></div>
+            <img src="img/CEO.jpg" alt="Amram Maluki">
+            <h4>Maluki Mungala</h4>
+            <p><em>Chief Executive Officer</em></p>
+            <p class="description">With over a decade of experience in leadership and strategic management, Maluki drives the company's vision and mission forward.</p>
+            <div class="social-media">
+                <a href="mailto:amrammaluki006@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/amram-maluki-606490221"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/254715707285"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="team-member" style="background-image: url('img/survey.jpg');">
+            <div class="overlay"></div>
+            <img src="img/principal surveyor.jpg" alt="Victor Kiogora">
+            <h4>Victor Kiogora</h4>
+            <p><em>Principal Surveyor</em></p>
+            <p class="description">Victor specializes in precise land measurements and development planning, ensuring accurate project execution.</p>
+            <div class="social-media">
+                <a href="mailto:victorkiogora007@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/254797162687"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/victor.bomu.3?mibextid=ZbWKwL  "><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="team-member" style="background-image: url('img/gis\ training.jpg');">
+            <div class="overlay"></div>
+            <img src="img/IT department.jpeg" alt="Moseti Ben">
+            <h4>Moseti Ben</h4>
+            <p><em>Head of IT Department</em></p>
+            <p class="description">An IT expert passionate about innovation, Moseti ensures the company's technology infrastructure is robust and secure.</p>
+            <div class="social-media">
+                <a href="mailto:kegokoramoseti192@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/254793983993"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Team Section Styling */
+    #team {
+        padding: 80px 20px;
+        background-color: rgba(173, 216, 230, 0.8);
+        background-image: url('img/eastafrica.jpg');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    #team h2 {
+        font-size: 2.5rem;
+        color: #0b3e62;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .team-container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .team-member {
+        position: relative;
+        width: 300px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+
+    .team-member .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        border-radius: 15px;
+        z-index: 1;
+    }
+
+    .team-member img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 2; /* Ensure the image is above the overlay */
+    }
+
+    .team-member h4 {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 10px;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+    }
+
+    .team-member p {
+        font-size: 1.1rem;
+        color: #fff;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        color: #ccc;
+        font-style: italic;
+        position: relative;
+        z-index: 2;
+    }
+
+    .social-media {
+        margin-top: 15px;
+        position: relative;
+        z-index: 2; /* Ensure social media icons are above the overlay */
+    }
+
+    .social-media a {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0 10px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-media a:hover {
+        color: #4CAF50;
+        transform: scale(1.2);
+    }
+
+    /* Hover Effects */
+    .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .team-member:hover h4, .team-member:hover p {
+        color: white;
+    }
+
+    .team-member:hover img {
+        transform: scale(1.05);
+    }
+</style>
+    <!-- Contact Section -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Our Locations</h3>
+            <p><strong>Head Office:</strong> 2nd Floor, Gathungu House, Kanisa Road, Nyeri Town</p>
+            <p><strong>Tala Branch:</strong> 3rd Floor, Tala Plaza, Tala Town, Kangundo Road</p>
+            <p><strong>P.O. Box:</strong> 566-10100, Nyeri</p>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p><strong>Tel:</strong> <a href="tel:+254715707285">+254(0)715 707285</a></p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong> <a href="mailto:info@geocelestialltd.co.ke">info@geocelestialltd.co.ke</a></p>
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100088110354772&mibextid=ZbWKwL" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/amram-maluki-606490221" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/rT3u7y5wZam7D2te8" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="https://wa.me/254715707285" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* General Styling for the Contact Section */
+#contact {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#contact h2 {
+    font-size: 2.8rem;
+    color: #0b3e62;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.contact-info {
+    background: #f0f8ff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    color: #0b3e62;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.contact-item i {
+    font-size: 1.6rem;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.contact-item a {
+    color: #0b3e62;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #4CAF50;
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-media-icons a {
+    font-size: 1.8rem;
+    color: #0b3e62;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    color: #4CAF50;
+    transform: scale(2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 10px;
+    }
+
+    #contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .social-media-icons a {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+<!-- Contact Form -->
+<section id="contact">
+    <div class="contact-form-container">
+        <h3>Send Us a Message</h3>
+        <form class="contact-form" id="contact-form" method="POST" action="https://formspree.io/f/your-form-id" autocomplete="off">
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <input type="text" id="name" name="name" placeholder="Your Name" required style="flex:1; min-width: 150px;">
+                <input type="email" id="email" name="email" placeholder="Your Email" required style="flex:1; min-width: 150px;">
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" style="flex:1; min-width: 150px;">
+            </div>
+            <input type="text" id="subject" name="subject" placeholder="Subject (optional)" style="margin-top:10px;">
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required style="resize: vertical; margin-top:10px;"></textarea>
+            <button type="submit">
+                <i class="fas fa-paper-plane" style="margin-right:8px;"></i>Send Message
+            </button>
+        </form>
+        <div id="form-status" style="margin-top:15px; font-size:1rem;"></div>
+    </div>
+</section>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    status.textContent = "Sending...";
+    status.style.color = "#fff";
+    try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+            status.textContent = "Thank you! Your message has been sent.";
+            status.style.color = "#4CAF50";
+            form.reset();
+        } else {
+            status.textContent = "Oops! Something went wrong. Please try again.";
+            status.style.color = "#ff4444";
+        }
+    } catch {
+        status.textContent = "Network error. Please try again.";
+        status.style.color = "#ff4444";
+    }
+});
+</script>
+<style>
+.contact-form-container {
+    background: linear-gradient(135deg, #0b3e62 70%, #4CAF50 100%);
+    box-shadow: 0 8px 32px rgba(11,62,98,0.18);
+    padding: 40px 30px 30px 30px;
+    border-radius: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.contact-form-container h3 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255,255,255,0.95);
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(11,62,98,0.06);
+    transition: box-shadow 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+.contact-form textarea {
+    min-height: 120px;
+    max-height: 300px;
+}
+.contact-form button {
+    background: linear-gradient(90deg, #4CAF50 60%, #0b3e62 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 28px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(11,62,98,0.08);
+    transition: background 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+.contact-form button:hover {
+    background: linear-gradient(90deg, #0b3e62 60%, #4CAF50 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+#form-status {
+    min-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 600px) {
+    .contact-form-container {
+        padding: 20px 8px 18px 8px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.98rem;
+        padding: 10px 10px;
+    }
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px 18px;
+    }
+}
+</style>
+
+<style>
+    /* Contact Section Styling */
+    #contact {
+        padding: 60px 20px;
+        background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+    }
+
+    .contact-form-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 25px;
+        background: linear-gradient(to top left, #4CAF50, #0b3e62);
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .contact-form-container h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        color: #666;
+    }
+
+    .contact-form button {
+        padding: 15px;
+        background: white;
+        color: #4CAF50;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background: #0b3e62;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .contact-form-container {
+            padding: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 0.9rem;
+        }
+
+        .contact-form button {
+            font-size: 1rem;
+        }
+    }
+</style>
+<footer>
+    <div class="footer-content">
+        <!-- Branding Section -->
+        <div class="footer-branding">
+            <img src="img/GEOCELESTIAL LTD V3 SVG-01.svg" alt="GEOCELESTIAL Ltd Logo" class="footer-logo">
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-copyright">
+        <p>&copy; 2024 <strong>Geocelestial Ltd</strong>. All Rights Reserved.</p>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">&#8593;</button>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Back to Top Button functionality
+    const backToTopBtn = document.getElementById("back-to-top");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    backToTopBtn.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
+<style>
+    /* Footer Styling */
+footer {
+    background: linear-gradient(rgba(11, 62, 98, 0.7), rgba(11, 62, 98, 0.7)), url('img/remote\ sensing.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center center; /* Center the background image */
+    z-index: 1; /* Make sure text is above the background */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Branding Section */
+.footer-branding {
+    flex: 1;
+    text-align: left;
+    max-width: 250px;
+}
+
+.footer-logo {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-branding p {
+    font-size: 1.2rem;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* Quick Links */
+.footer-links {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-links h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-branding {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer .footer-links {
+        text-align: center;
+    }
+}
+</style>
