@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Geocelestial Ltd - Premier land surveying, GIS, remote sensing, and environmental solutions in Kenya. Precision, innovation, and professionalism.">
+    <meta name="keywords" content="land surveying, GIS Kenya, remote sensing, environmental assessment, geospatial solutions">
+    <meta name="author" content="Geocelestial Ltd">
+    <meta property="og:title" content="Geocelestial Ltd - Your Gateway to Celestial Services">
+    <meta property="og:description" content="Professional land surveying, GIS, remote sensing, and environmental solutions across Kenya.">
+    <meta property="og:image" content="https://geocelestialltd.co.ke/img/social-preview.jpg">
+    <meta property="og:url" content="https://geocelestialltd.co.ke">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <title>Geocelestial Ltd - Your Gateway to Celestial Services</title>
     
     <!-- Favicon -->
     <link rel="icon" href="img/GEOCELESTIAL LTD V3 SVG-01.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="font" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+
     
     <!-- External Libraries -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -14,24 +32,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <div class="spinner"></div>
-            <h3>Loading Excellence...</h3>
-        </div>
-    </div>
+
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
 
     <!-- Navigation -->
     <nav class="navbar-custom" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">
-                    <img src="img/GEOCELESTIAL LTD V3 SVG-01.svg" alt="Geocelestial Ltd" class="logo">
+                    <img src="img/GEOCELESTIAL LTD V2-01.svg" alt="Geocelestial Ltd" class="logo" width="220" height="60">
+                    <span class="logo-text"></span>
                 </a>
             </div>
             
@@ -39,11 +62,17 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About Us</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#team" class="nav-link">Our Team</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
             </ul>
 
-            <div class="hamburger" id="hamburger">
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-sm btn-primary">Get Quote</a>
+            </div>
+
+            <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -55,15 +84,33 @@
     <section id="home" class="hero-section">
         <div class="hero-background">
             <div class="hero-slider" id="heroSlider">
-                <div class="slide active" style="background-image: url('img/survey.jpg')">
+                <div class="slide active" style="background-image: url('img/survey.webp')" aria-hidden="false">
                     <div class="slide-overlay"></div>
+                    <div class="slide-caption">
+                        <h2>Precision Land Surveying</h2>
+                        <p>Accurate measurements for development projects nationwide</p>
+                    </div>
                 </div>
-                <div class="slide" style="background-image: url('img/IMG_20241119_151506.jpg')">
+                <div class="slide" style="background-image: url('img/drone-survey.webp')" aria-hidden="true">
                     <div class="slide-overlay"></div>
+                    <div class="slide-caption">
+                        <h2>Advanced Drone Technology</h2>
+                        <p>High-resolution aerial data collection and analysis</p>
+                    </div>
                 </div>
-                <div class="slide" style="background-image: url('img/remote sensing.jpeg')">
+                <div class="slide" style="background-image: url('img/afric.jpg')" aria-hidden="true">
                     <div class="slide-overlay"></div>
+                    <div class="slide-caption">
+                        <h2>GIS Spatial Analysis</h2>
+                        <p>Transform data into actionable insights</p>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="slider-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
         
@@ -77,86 +124,342 @@
                     Delivering excellence in land surveying, GIS, remote sensing, and environmental solutions across Kenya with precision, innovation, and unparalleled professionalism.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Explore Services</a>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                    <a href="#services" class="btn btn-primary btn-icon">
+                        <span>Explore Services</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-video" data-video-id="dQw4w9WgXcQ">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Our Story</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-clients">
+                <p>Trusted by leading organizations:</p>
+                <div class="client-logos">
+                    <img src="img/NEMA.jpg" alt="NEMA" width="80" height="40" loading="lazy">
+                    <img src="img/KSA.jpg" alt="Kenya Space Agency" width="80" height="40" loading="lazy">
+                    <img src="img/county government.jpg" alt="County Government" width="80" height="40" loading="lazy">
                 </div>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
             <div class="scroll-arrow"></div>
             <span>Scroll to explore</span>
+        </div>
+        
+        <!-- Video Modal -->
+        <div id="videoModal" class="video-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close video">&times;</button>
+                <div class="video-container">
+                    <iframe id="companyVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-count="10">15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-count="500">500+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-count="50">100+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 data-count="47">23</h3>
+                        <p>Counties Covered</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="section-background">
-            <div class="floating-elements">
-                <div class="float-element"></div>
-                <div class="float-element"></div>
-                <div class="float-element"></div>
-            </div>
+<section id="about" class="about-section">
+    <div class="section-background">
+        <div class="floating-elements">
+            <div class="float-element"></div>
+            <div class="float-element"></div>
+            <div class="float-element"></div>
         </div>
-        
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <h2 class="section-title">
-                            <span class="title-accent">About</span> Us
-                        </h2>
-                        <p class="section-description">
-                            Geocelestial Ltd is a registered company in Kenya offering professional services in land surveying, Geospatial Information Systems, Remote Sensing, Environmental Impact Assessment, Environmental Audit, and Information Technology.
-                        </p>
-                        <p>
-                            We meet this broad spectrum of surveying and engineering needs by offering high-quality work within reliable turnaround timelines, and in unparalleled professionalism.
-                        </p>
-                        <div class="stats-row">
-                            <div class="stat-item">
-                                <h3>10+</h3>
-                                <p>Years Experience</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>500+</h3>
-                                <p>Projects Completed</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>50+</h3>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-visual">
-                        <div class="image-stack">
-                            <img src="img/survey.jpg" alt="Land Surveying" class="stack-img img-1">
-                            <img src="img/GIS.jpg" alt="GIS Services" class="stack-img img-2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-lg-6">
+                <div class="about-content" data-aos="fade-right">
+                    <h2 class="section-title">
+                        <span class="title-accent">About</span> Us
+                    </h2>
+                    <p class="section-description">
+                        Geocelestial Ltd is a registered company in Kenya offering professional services in land surveying, Geospatial Information Systems (GIS), Remote Sensing, Environmental Impact Assessment, Environmental Audit, and Information Technology.
+                    </p>
+                    <p>
+                        Founded in 2008, we have grown from a small surveying consultancy to a multidisciplinary firm trusted by government agencies, private developers, and international NGOs. Our team blends technical expertise with innovation to solve complex spatial problems.
+                    </p>
+                    <p>
+                        We meet this broad spectrum of surveying and engineering needs by delivering high-quality work within reliable turnaround timelines, all while maintaining the highest levels of professionalism and integrity.
+                    </p>
+                    
+                    <h4>Our Core Values</h4>
+                    <ul>
+                        <li>✅ Precision – Accuracy in every measurement.</li>
+                        <li>✅ Innovation – Applying modern tools and methods.</li>
+                        <li>✅ Integrity – Transparent and ethical practices.</li>
+                        <li>✅ Sustainability – Protecting the environment in all our projects.</li>
+                    </ul>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Our <span class="title-accent">Services</span>
-                </h2>
-                <p class="section-subtitle">Comprehensive solutions for all your geospatial and environmental needs</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Our Mission</h4>
+                                <p>To provide innovative geospatial solutions that drive sustainable development across East Africa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Our Vision</h4>
+                                <p>To be the premier geospatial services provider in Africa by 2030.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Our Impact</h5>
+                    <p>
+                        Over the past 5 years, we have successfully executed over 120 projects, mapped more than 50,000 hectares, 
+                        and provided critical environmental assessments that have guided major infrastructure developments in Kenya and beyond.
+                    </p>
+                    
+                    <div class="certifications">
+                        <h5>Certifications & Affiliations:</h5>
+                        <div class="cert-badges">
+                            <img src="img/NEMA.jpg" alt="NEMA Certified" loading="lazy">
+                            <img src="img/ISOcert.jpg" alt="ISO Certified" loading="lazy">
+                            <img src="img/surveyors-board.jpg" alt="Surveyors Board" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="#services" class="btn btn-primary">Explore Our Services</a>
+                        <a href="#contact" class="btn btn-outline-primary">Get in Touch</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="services-grid">
+            <!-- Images Column -->
+            <div class="col-lg-6">
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="image-stack">
+                        <img src="img/20240321_100619.jpg" alt="Survey Team at Work" class="stack-img img-1" loading="lazy">
+                        <img src="img/20240516_141438.jpg" alt="GIS Analysis" class="stack-img img-2" loading="lazy">
+                        <img src="img/20211016_145840.jpg" alt="Remote Sensing" class="stack-img img-3" loading="lazy">
+                        <div class="video-thumbnail">
+                            <img src="img/amram.jpg" alt="Office Tour" loading="lazy">
+                            <button class="play-button" data-video-id="dQw4w9WgXcQ">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                Our <span class="title-accent">Services</span>
+            </h2>
+            <p class="section-subtitle">Comprehensive solutions for all your geospatial and environmental needs</p>
+        </div>
+        
+        <div class="services-tabs" data-aos="fade-up">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="surveying">Surveying</button>
+                <button class="tab-btn" data-tab="gis">GIS</button>
+                <button class="tab-btn" data-tab="remote-sensing">Remote Sensing</button>
+                <button class="tab-btn" data-tab="environmental">Environmental</button>
+                <button class="tab-btn" data-tab="it">IT Solutions</button>
+            </div>
+            
+            <div class="tab-contents">
+                <!-- Surveying -->
+                <div class="tab-content active" id="surveying">
+                    <div class="service-detail">
+                        <div class="detail-text">
+                            <h3>Land Surveying Services</h3>
+                            <p>Our land surveyors are registered with the Institution of Surveyors of Kenya (ISK) and the Land Surveyors Board (LSB) to provide Cadastral/Real Property, Topographical, Engineering, Mining, and Hydrographic Surveying services to clients countrywide.</p>
+                            <div class="service-features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> Cadastral/Real Property Surveys</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Topographical Surveys</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Engineering Surveys</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Mining Surveys</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Hydrographic Surveys</div>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Request Survey</a>
+                        </div>
+                        <div class="detail-visual">
+                            <img src="img/survey.jpg" alt="Survey Equipment" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GIS -->
+                <div class="tab-content" id="gis">
+                    <div class="service-detail">
+                        <div class="detail-text">
+                            <h3>GIS Solutions</h3>
+                            <p>Our experienced personnel in the GIS department conduct Spatial Analysis and Visualization of various datasets, predicting the outcomes of different actions to help clients make informed decisions.</p>
+                            <div class="service-features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> GIS Database Design</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Spatial Data Collection</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Web Mapping Applications</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Custom GIS Tools</div>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Get GIS Support</a>
+                        </div>
+                        <div class="detail-visual">
+                            <img src="img/GIS.jpg" alt="GIS Solutions" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remote Sensing -->
+                <div class="tab-content" id="remote-sensing">
+                    <div class="service-detail">
+                        <div class="detail-text">
+                            <h3>Remote Sensing Services</h3>
+                            <p>Our partnerships with global data collectors like NASA, USGS, Kenya Space Agency, among others; gives us access to a wide range of remotely acquired satellite data.
+ Moreover, our team in partnership with KCAA has been licensed to operate Unmanned Aerial Vehicles/ Drones; facilitating fast massive data collection as well as in inaccessible areas.</p>
+                            <div class="service-features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> Satellite Image Analysis</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Drone Mapping</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Vegetation Monitoring</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Urban Expansion Studies</div>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Request Analysis</a>
+                        </div>
+                        <div class="detail-visual">
+                            <img src="img/remote sensing.jpeg" alt="Remote Sensing" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental -->
+                <div class="tab-content" id="environmental">
+                    <div class="service-detail">
+                        <div class="detail-text">
+                            <h3>Environmental Services</h3>
+                            <p>All development projects require EIA/EA. Our experts, licensed by NEMA, conduct audits and generate comprehensive EIA reports for various projects.</p>
+                            <div class="service-features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> EIA & Audits</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Waste Management Plans</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Climate Change Mitigation</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Biodiversity Assessments</div>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Get Environmental Support</a>
+                        </div>
+                        <div class="detail-visual">
+                            <img src="img/ESIA.jpg" alt="Environmental Services" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Solutions -->
+                <div class="tab-content" id="it">
+                    <div class="service-detail">
+                        <div class="detail-text">
+                            <h3>IT Solutions</h3>
+                            <p>Our tech enthusiasts through machine learning, Artificial Intelligence (AI), and Programming languages have the ability to develop Land Information Systems, Web Maps, GIS Systems, for organizations.</p>
+                            <div class="service-features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> Web & Mobile Apps</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Cloud Data Management</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Automation & Integration</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Data Security Solutions</div>
+                            </div>
+                            <a href="#contact" class="btn btn-outline">Discuss IT Solutions</a>
+                        </div>
+                        <div class="detail-visual">
+                            <img src="img/Information Tech.png" alt="IT Solutions" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tab Switching Script -->
+<script>
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+    });
+});
+</script>
+                    
+                    <!-- Other tab contents would follow the same pattern -->
+                    
+                </div>
+            </div>
+            
+            <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card" data-service="surveying">
                     <div class="service-icon">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
-                    <img src="img/survey.jpg" alt="Land Surveying" class="service-image">
+                    <img src="img/GEOCELESTIAL LTD V2-01.svg" alt="Land Surveying" class="service-image" loading="lazy">
                     <div class="service-content">
                         <h3>Land Surveying</h3>
                         <p>Registered surveyors providing Cadastral/Real Property, Topographical, Engineering, Mining, and Hydrographic Surveying services countrywide.</p>
@@ -165,164 +468,349 @@
                             <span class="feature-tag">Topographical</span>
                             <span class="feature-tag">Engineering</span>
                         </div>
+                        <a href="#" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="service-card" data-service="gis">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <img src="img/GIS.jpg" alt="GIS Services" class="service-image">
-                    <div class="service-content">
-                        <h3>Geographic Information Systems</h3>
-                        <p>Spatial Analysis and Visualization of datasets, predicting outcomes to help clients make informed decisions.</p>
-                        <div class="service-features">
-                            <span class="feature-tag">Spatial Analysis</span>
-                            <span class="feature-tag">Data Visualization</span>
-                            <span class="feature-tag">Decision Support</span>
-                        </div>
-                    </div>
+                <!-- Other service cards would follow the same pattern -->
+                
+            </div>
+            
+            <div class="service-cta" data-aos="fade-up">
+                <div class="cta-content">
+                    <h3>Need a custom solution?</h3>
+                    <p>We specialize in tailored geospatial services for unique project requirements.</p>
                 </div>
-
-                <div class="service-card" data-service="remote-sensing">
-                    <div class="service-icon">
-                        <i class="fas fa-satellite"></i>
-                    </div>
-                    <img src="img/remote sensing.jpeg" alt="Remote Sensing" class="service-image">
-                    <div class="service-content">
-                        <h3>Remote Sensing</h3>
-                        <p>Access to satellite data from NASA, USGS, Kenya Space Agency, plus licensed drone operations for comprehensive data collection.</p>
-                        <div class="service-features">
-                            <span class="feature-tag">Satellite Imagery</span>
-                            <span class="feature-tag">Drone Services</span>
-                            <span class="feature-tag">Data Analysis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card" data-service="eia">
-                    <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <img src="img/ESIA.jpg" alt="Environmental Assessment" class="service-image">
-                    <div class="service-content">
-                        <h3>Environmental Impact Assessment</h3>
-                        <p>NEMA-licensed experts conducting audits and generating comprehensive EIA reports for various development projects.</p>
-                        <div class="service-features">
-                            <span class="feature-tag">EIA Reports</span>
-                            <span class="feature-tag">Environmental Audits</span>
-                            <span class="feature-tag">NEMA Licensed</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card" data-service="it">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <img src="img/Information Tech.png" alt="Information Technology" class="service-image">
-                    <div class="service-content">
-                        <h3>Information Technology</h3>
-                        <p>Machine learning, AI, and programming solutions for Land Information Systems, Web Maps, and GIS Systems.</p>
-                        <div class="service-features">
-                            <span class="feature-tag">AI Solutions</span>
-                            <span class="feature-tag">Web Development</span>
-                            <span class="feature-tag">System Integration</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card" data-service="training">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <img src="img/gis training.jpg" alt="GIS Training" class="service-image">
-                    <div class="service-content">
-                        <h3>GIS Training</h3>
-                        <p>Comprehensive training programs in spatial data management, mapping, analysis techniques, and GIS software proficiency.</p>
-                        <div class="service-features">
-                            <span class="feature-tag">Professional Training</span>
-                            <span class="feature-tag">Certification</span>
-                            <span class="feature-tag">Hands-on Learning</span>
-                        </div>
-                    </div>
-                </div>
+                <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team-section">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
         <div class="section-background">
-            <img src="img/eastafrica.jpg" alt="East Africa Map" class="bg-image">
-            <div class="bg-overlay"></div>
+            <div class="map-pattern"></div>
         </div>
         
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    Our <span class="title-accent">Team</span>
+                    Featured <span class="title-accent">Projects</span>
                 </h2>
-                <p class="section-subtitle">Meet the experts driving our success</p>
+                <p class="section-subtitle">Explore our portfolio of successful geospatial projects</p>
             </div>
             
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/CEO.jpg" alt="Maluki Mungala" class="member-photo">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="mailto:amrammaluki006@gmail.com"><i class="fas fa-envelope"></i></a>
-                                <a href="https://www.linkedin.com/in/amram-maluki-606490221"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://wa.me/254715707285"><i class="fab fa-whatsapp"></i></a>
-                            </div>
+            <div class="projects-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="surveying">Surveying</button>
+                <button class="filter-btn" data-filter="gis">GIS</button>
+                <button class="filter-btn" data-filter="remote-sensing">Remote Sensing</button>
+                <button class="filter-btn" data-filter="environmental">Environmental</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="surveying" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="img/20240516_141438.jpg" alt="Land Title Survey" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Land Title Survey</h4>
+                            <p>Nairobi County</p>
                         </div>
                     </div>
-                    <div class="member-info">
-                        <h4>Maluki Mungala</h4>
-                        <p class="member-role">Chief Executive Officer</p>
-                        <p class="member-description">Strategic leadership driving innovation and excellence in geospatial services across Kenya.</p>
+                    <div class="project-details">
+                        <h3>Nairobi Land Title Survey</h3>
+                        <p>Comprehensive cadastral survey for 500+ parcels in Nairobi's fast-growing suburbs.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 6 Months</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Nairobi</span>
+                        </div>
+                        <a href="project-detail.html" class="btn btn-sm btn-outline">View Case Study</a>
                     </div>
                 </div>
+                
+                <!-- Other project cards would follow the same pattern -->
+                
+            </div>
+            
+            <div class="project-cta">
+                <p>Want to see more of our work?</p>
+                <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/principal surveyor.jpg" alt="Victor Kiogora" class="member-photo">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="mailto:victorkiogora007@gmail.com"><i class="fas fa-envelope"></i></a>
-                                <a href="https://wa.me/254797162687"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://www.facebook.com/victor.bomu.3"><i class="fab fa-facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Victor Kiogora</h4>
-                        <p class="member-role">Principal Surveyor</p>
-                        <p class="member-description">Expert in precise land measurements and development planning with years of field experience.</p>
-                    </div>
+    <div class="team-grid">
+    <!-- CEO -->
+    <div class="team-member" data-aos="fade-up">
+        <div class="member-image">
+            <img src="img/CEO.jpg" alt="Maluki Mungala" class="member-photo" loading="lazy">
+            <div class="member-overlay">
+                <div class="social-links">
+                    <a href="mailto:amrammaluki006@gmail.com" aria-label="Email Maluki"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/amram-maluki-606490221" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/254715707285" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Maluki Mungala</h4>
+            <p class="member-role">Chief Executive Officer</p>
+            <p class="member-description">Strategic leadership driving innovation and excellence in geospatial services across Kenya.</p>
+            <button class="btn-profile" data-member="1">View Profile</button>
+        </div>
+    </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/IT department.jpeg" alt="Moseti Ben" class="member-photo">
-                        <div class="member-overlay">
-                            <div class="social-links">
-                                <a href="mailto:kegokoramoseti192@gmail.com"><i class="fas fa-envelope"></i></a>
-                                <a href="https://wa.me/254793983993"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Moseti Ben</h4>
-                        <p class="member-role">Head of IT Department</p>
-                        <p class="member-description">Technology innovator ensuring robust and secure infrastructure for all digital solutions.</p>
-                    </div>
+    <!-- Principal Surveyor -->
+    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-image">
+            <img src="img/principal surveyor.jpg" alt="Principal Surveyor" class="member-photo" loading="lazy">
+            <div class="member-overlay">
+                <div class="social-links">
+                    <a href="mailto:victorkiogora007@gmail.com" aria-label="Email Principal Surveyor"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/principal-surveyor" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/254797162687" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/victor.bomu.3?mibextid=ZbWKwL  "><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Victor Kiogora</h4>
+            <p class="member-role">Principal Surveyor</p>
+            <p class="member-description">Oversees all survey operations ensuring precision, compliance, and efficiency in field and office work.</p>
+            <button class="btn-profile" data-member="2">View Profile</button>
+        </div>
+    </div>
+
+    <!-- Head of IT -->
+    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-image">
+            <img src="img/IT department.jpeg" alt="Head of IT" class="member-photo" loading="lazy">
+            <div class="member-overlay">
+                <div class="social-links">
+                    <a href="https://wa.me/254793983993" aria-label="Email Head of IT"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/head-it" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/254793983993" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Moseti Ben</h4>
+            <p class="member-role">Head of IT</p>
+            <p class="member-description">Leads the company’s IT strategy, cybersecurity, and digital transformation initiatives.</p>
+            <button class="btn-profile" data-member="3">View Profile</button>
+        </div>
+    </div>
+</div>
+
+                <!-- Other team members would follow the same pattern -->
+                
+</div>
+            
+            <div class="team-cta">
+                <div class="cta-content">
+                    <h3>Join Our Growing Team</h3>
+                    <p>We're always looking for talented professionals to join our team of experts.</p>
+                </div>
+                <a href="careers.html" class="btn btn-primary">View Open Positions</a>
+            </div>
+        </div>
+        
+        <!-- Team Modal -->
+        <div id="teamModal" class="team-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <div class="modal-body">
+                    <!-- Dynamic content loaded via JavaScript -->
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                Client <span class="title-accent">Testimonials</span>
+            </h2>
+            <p class="section-subtitle">What our clients say about our services</p>
+        </div>
+        
+        <div class="testimonials-slider" data-aos="fade-up">
+            <!-- Testimonial 1 -->
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"Geocelestial Ltd delivered our land survey project ahead of schedule with exceptional accuracy. Their team was professional and responsive throughout the entire process."</p>
+                    <div class="client-info">
+                       
+                        <div>
+                            <h4>James Mwangi</h4>
+                            <p>Director, Greenfield Developers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"Their GIS mapping services helped us make better planning decisions for our infrastructure projects. Highly recommended for precision and quality work."</p>
+                    <div class="client-info">
+                        
+                        <div>
+                            <h4>Sarah Kimani</h4>
+                            <p>Urban Planner, City Council</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"Their hydrographic survey team provided us with accurate marine data, which was essential for our coastal engineering project. The professionalism was top-notch."</p>
+                    <div class="client-info">
+                        <div>
+                            <h4>Peter Otieno</h4>
+                            <p>Marine Engineer, Coastal Works Ltd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="testimonial-controls">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+                <!-- Other testimonials would follow the same pattern -->
+                
+            </div>
+            
+            <div class="testimonial-cta">
+                <p>Ready to experience our exceptional service?</p>
+                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+<section id="blog" class="blog-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                Latest <span class="title-accent">Insights</span>
+            </h2>
+            <p class="section-subtitle">Stay updated with industry trends and company news</p>
+        </div>
+        
+        <div class="blog-grid">
+            <!-- Original Blog Card -->
+            <article class="blog-card" data-aos="fade-up">
+                <div class="blog-image">
+                    <img src="img/gistech.jpg" alt="GIS Trends 2024" loading="lazy">
+                    <div class="blog-date">
+                        <span>15</span>
+                        <span>June 2024</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">GIS Technology</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h3><a href="blog-post.html">Emerging GIS Trends Shaping Kenya's Development in 2024</a></h3>
+                    <p>Explore how cutting-edge GIS technologies are transforming urban planning, agriculture, and environmental management across Kenya.</p>
+                    <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- New Blog Card 1: Drone Mapping -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-image">
+                    <img src="img/drone.jpg" alt="Drone Mapping in Agriculture" loading="lazy">
+                    <div class="blog-date">
+                        <span>28</span>
+                        <span>May 2024</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Drone Technology</span>
+                        <span class="read-time">4 min read</span>
+                    </div>
+                    <h3><a href="drone-mapping.html">How Drone Mapping is Revolutionizing Kenyan Agriculture</a></h3>
+                    <p>Discover how smallholder farmers are using affordable drone technology to monitor crops, optimize irrigation, and increase yields by up to 30%.</p>
+                    <a href="drone-mapping.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- New Blog Card 2: Urban Planning -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-image">
+                    <img src="img/urbanplanning.jpg" alt="Nairobi Urban Planning" loading="lazy">
+                    <div class="blog-date">
+                        <span>10</span>
+                        <span>April 2024</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Urban Development</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h3><a href="urban-planning.html">3D GIS Models: The Future of Nairobi's Urban Planning</a></h3>
+                    <p>Learn how Nairobi County is leveraging 3D city modeling to solve traffic congestion, plan infrastructure, and manage rapid urbanization.</p>
+                    <a href="urban-planning.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- New Blog Card 3: Environmental Monitoring -->
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-image">
+                    <img src="img/satellite.jpg" alt="Forest Monitoring" loading="lazy">
+                    <div class="blog-date">
+                        <span>22</span>
+                        <span>March 2024</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Environmental GIS</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h3><a href="forest-monitoring.html">Satellite vs Drone: Monitoring Kenya's Forest Cover</a></h3>
+                    <p>A comparative analysis of how different geospatial technologies are being used to combat deforestation in the Mau Forest Complex.</p>
+                    <a href="forest-monitoring.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+        
+        <div class="blog-cta">
+            <p>Want more industry insights and updates?</p>
+            <a href="blog.html" class="btn btn-outline">Visit Our Blog</a>
+        </div>
+    </div>
+</section>
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -335,7 +823,7 @@
             
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="contact-info">
+                    <div class="contact-info" data-aos="fade-right">
                         <h3>Our Locations</h3>
                         
                         <div class="contact-item">
@@ -345,6 +833,7 @@
                             <div class="contact-details">
                                 <h4>Head Office</h4>
                                 <p>2nd Floor, Gathungu House<br>Kanisa Road, Nyeri Town</p>
+                                <a href="https://maps.app.goo.gl/rT3u7y5wZam7D2te8" class="map-link" target="_blank">View on Map <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                         
@@ -355,6 +844,7 @@
                             <div class="contact-details">
                                 <h4>Tala Branch</h4>
                                 <p>3rd Floor, Tala Plaza<br>Tala Town, Kangundo Road</p>
+                                <a href="#" class="map-link">View on Map <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                         
@@ -365,6 +855,7 @@
                             <div class="contact-details">
                                 <h4>Phone</h4>
                                 <p><a href="tel:+254715707285">+254(0)715 707285</a></p>
+                                <p><a href="tel:+254797162687">+254(0)797 162687</a></p>
                             </div>
                         </div>
                         
@@ -375,98 +866,256 @@
                             <div class="contact-details">
                                 <h4>Email</h4>
                                 <p><a href="mailto:info@geocelestialltd.co.ke">info@geocelestialltd.co.ke</a></p>
+                                <p><a href="mailto:amrammaluki006@gmail.com">amrammaluki006@gmail.com</a></p>
                             </div>
+                        </div>
+                        
+                        <div class="business-hours">
+                            <h4>Business Hours</h4>
+                            <ul>
+                                <li>Monday - Friday: <span>8:00 AM - 5:00 PM</span></li>
+                                <li>Saturday: <span>9:00 AM - 1:00 PM</span></li>
+                                <li>Sunday: <span>Closed</span></li>
+                            </ul>
                         </div>
                         
                         <div class="social-media">
                             <h4>Follow Us</h4>
                             <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100088110354772"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/in/amram-maluki-606490221"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/254715707285"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://maps.app.goo.gl/rT3u7y5wZam7D2te8"><i class="fas fa-map-marker-alt"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100088110354772" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/amram-maluki-606490221" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://wa.me/254715707285" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://twitter.com/geocelestial" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/geocelestial" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper" data-aos="fade-left">
                         <form class="contact-form" id="contactForm">
+                            <div class="form-header">
+                                <h3>Send Us a Message</h3>
+                                <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                            </div>
+                            
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                    <label for="email">Your Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
                                 </div>
                             </div>
+                            
                             <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+254 700 000000">
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="surveying">Land Surveying</option>
+                                    <option value="gis">GIS Services</option>
+                                    <option value="remote-sensing">Remote Sensing</option>
+                                    <option value="eia">Environmental Assessment</option>
+                                    <option value="it">IT Solutions</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
+                            
                             <div class="form-group">
-                                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
+                            
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                <p class="form-note">We respect your privacy. Your information will not be shared.</p>
+                            </div>
                         </form>
-                        <div id="form-status"></div>
+                        
+                        <div id="form-status" class="form-status"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1755189885098!6m8!1m7!1s-DIrzjJK7UB5YsP4wTQg4Q!2m2!1d-0.4200313367029955!2d36.94865383806847!3f84.827736!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates, industry news, and exclusive offers directly to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="privacyCheck" required>
+                        <label for="privacyCheck">I agree to the privacy policy</label>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-background">
-            <img src="img/remote sensing.jpeg" alt="Remote Sensing" class="footer-bg">
-            <div class="footer-overlay"></div>
-        </div>
-        
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="img/GEOCELESTIAL LTD V3 SVG-01.svg" alt="Geocelestial Ltd" class="footer-logo">
-                    <p>Your Gateway to Celestial Services</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h5>Contact Info</h5>
-                    <p><i class="fas fa-phone"></i> +254(0)715 707285</p>
-                    <p><i class="fas fa-envelope"></i> info@geocelestialltd.co.ke</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Nyeri Town, Kenya</p>
-                </div>
-            </div>
+<footer class="footer">
+    <div class="footer-background">
+        <img src="img/landscape1.webp" alt="Footer Background" loading="lazy">
+        <div class="footer-overlay"></div>
+    </div>
+
+    <div class="container">
+        <div class="footer-grid">
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 <strong>Geocelestial Ltd</strong>. All Rights Reserved.</p>
+            <!-- About Section -->
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <img src="img/GEOCELESTIAL LTD V3 SVG-01.svg" alt="Geocelestial Ltd Logo" width="180" height="50" loading="lazy">
+                    <span>Geocelestial Ltd</span>
+                </div>
+                <p class="footer-description">
+                    Providing professional land surveying, GIS, remote sensing, and environmental solutions across Kenya with precision, innovation, and unparalleled professionalism.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100088110354772" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/amram-maluki-606490221" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/254715707285" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://twitter.com/geocelestial" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/geocelestial" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col footer-services">
+                <h4 class="footer-title">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Land Surveying</a></li>
+                    <li><a href="#">GIS Services</a></li>
+                    <li><a href="#">Remote Sensing</a></li>
+                    <li><a href="#">Environmental Assessment</a></li>
+                    <li><a href="#">IT Solutions</a></li>
+                    <li><a href="#">Drone Surveying</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col footer-links">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col footer-contact">
+                <h4 class="footer-title">Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2nd Floor, Gathungu House<br>Kanisa Road, Nyeri Town</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>
+                            <a href="tel:+254715707285">+254 (0)715 707285</a><br>
+                            <a href="tel:+254797162687">+254 (0)797 162687</a>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>
+                            <a href="mailto:info@geocelestialltd.co.ke">info@geocelestialltd.co.ke</a><br>
+                            <a href="mailto:amrammaluki006@gmail.com">amrammaluki006@gmail.com</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear"></span> Geocelestial Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="sitemap.xml">Sitemap</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+<script>
+    // Auto update year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <!-- Scripts -->
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- AOS Animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+        <!-- Font Awesome -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+        
+        <!-- Custom Scripts -->
+        <script src="js/main.min.js"></script>
+        <script src="js/animations.min.js"></script>
+        
+        <!-- Initialize AOS -->
+        <script>
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        </script>
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+        </script>
+    </body>
 </html>
