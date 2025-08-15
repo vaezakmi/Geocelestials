@@ -1,0 +1,724 @@
+/* Urban Hero Section */
+.urban-hero {
+  color: white;
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.urban-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.urban-hero h1 {
+  font-size: 2.8rem;
+  margin: 1.5rem 0;
+  line-height: 1.3;
+}
+
+.urban-hero .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.urban-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  min-width: 180px;
+}
+
+.stat-item i {
+  font-size: 1.8rem;
+  color: #4caf50;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Urban Category Layout */
+.urban-category {
+  padding: 4rem 0;
+}
+
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 3rem;
+}
+
+/* Main Articles */
+.urban-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Featured Article */
+.article-card.featured {
+  position: relative;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.article-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.article-card.featured .article-image {
+  height: 350px;
+}
+
+.article-card.featured .article-content {
+  padding: 2rem;
+}
+
+.article-card.featured h2 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.article-card.featured .excerpt {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.article-card.featured .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.article-card.featured .author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article-card.featured .author-name {
+  font-weight: 600;
+}
+
+.article-card.featured .author-title {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.article-card.featured .read-more {
+  background: #4caf50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.article-card.featured .read-more:hover {
+  background: #3d8b40;
+}
+
+/* Urban Topics Grid */
+.urban-topics {
+  margin: 2rem 0;
+}
+
+.urban-topics h3 {
+  font-size: 1.2rem;
+  color: #0f4c81;
+  margin-bottom: 1rem;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.topic-card {
+  position: relative;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+
+.topic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.topic-card h4 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Article Grid */
+.urban-article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.article-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.article-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.article-card:hover .article-image img {
+  transform: scale(1.05);
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.category-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.category-tag.transportation {
+  background: #1a5fb4;
+}
+
+.category-tag.housing {
+  background: #ff9800;
+}
+
+.category-tag.utilities {
+  background: #9c27b0;
+}
+
+.category-tag.smart-cities {
+  background: #4caf50;
+}
+
+.category-tag.slum-upgrading {
+  background: #f44336;
+}
+
+.article-content h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.4;
+}
+
+.article-content h3 a {
+  color: #0f4c81;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.article-content h3 a:hover {
+  color: #1a5fb4;
+}
+
+.excerpt {
+  color: #555;
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.read-time {
+  color: #777;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.read-more {
+  color: #1a5fb4;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.read-more i {
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.read-more:hover i {
+  transform: translateX(3px);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page-numbers a, .page-nav {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s;
+}
+
+.page-numbers a {
+  min-width: 40px;
+  text-align: center;
+}
+
+.page-numbers a.active {
+  background: #1a5fb4;
+  color: white;
+}
+
+.page-numbers a:hover:not(.active) {
+  background: #f0f7ff;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-nav:hover {
+  color: #1a5fb4;
+}
+
+/* Sidebar */
+.urban-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sidebar-widget {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.widget-title {
+  font-size: 1.2rem;
+  color: #0f4c81;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f7ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Planning Tools */
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tool-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #f8fafc;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.tool-card:hover {
+  background: #f0f7ff;
+  transform: translateX(5px);
+}
+
+.tool-icon {
+  width: 40px;
+  height: 40px;
+  background: #1a5fb4;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.tool-content h4 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+}
+
+.tool-content p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* County Portals */
+.county-portals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.county-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s;
+}
+
+.county-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f0f7ff;
+}
+
+.county-card span {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.county-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Urban Events */
+.urban-events {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.event-card:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  text-align: center;
+  min-width: 50px;
+  background: #f0f7ff;
+  border-radius: 6px;
+  padding: 0.3rem;
+}
+
+.event-date span:first-child {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a5fb4;
+}
+
+.event-date span:last-child {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.event-details h4 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+}
+
+.event-details p {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.event-link {
+  font-size: 0.8rem;
+  color: #1a5fb4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Job Listings */
+.job-listings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.job-card {
+  padding: 1rem;
+  border-radius: 6px;
+  background: #f8fafc;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.job-card:hover {
+  background: #f0f7ff;
+}
+
+.job-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.job-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.job-meta i {
+  margin-right: 0.3rem;
+}
+
+/* Newsletter Section */
+.urban-newsletter {
+  padding: 0 0 4rem;
+}
+
+.newsletter-card {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(135deg, #0a3d6b 0%, #1a5fb4 100%);
+  color: white;
+}
+
+.newsletter-content {
+  padding: 3rem;
+  flex: 1;
+}
+
+.newsletter-content h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.newsletter-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 1rem 0 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  padding: 0 1.5rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-form .btn:hover {
+  background: #3d8b40;
+}
+
+.newsletter-image {
+  flex: 1;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .urban-sidebar {
+    grid-row: 1;
+  }
+  
+  .newsletter-card {
+    flex-direction: column;
+  }
+  
+  .newsletter-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .urban-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .stat-item {
+    min-width: 140px;
+  }
+  
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .urban-hero {
+    padding: 3rem 0;
+  }
+  
+  .urban-category {
+    padding: 2rem 0;
+  }
+  
+  .stat-item {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .county-portals {
+    grid-template-columns: 1fr;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
